@@ -69,6 +69,9 @@ MyApp.Client/
 │   ├── App.css        # App styles
 │   ├── index.css      # Global styles with Tailwind CSS
 │   └── main.tsx       # Application entry point
+│   └── HelloApi.tsx   # Example API component
+│   └── dtos.ts        # Server generated DTOs
+│   └── gateway.ts     # ServiceStack API Client & Auth Context
 ├── public/            # Public static files
 ├── index.html         # HTML template
 ├── tailwind.config.ts # Tailwind CSS configuration (TypeScript)
