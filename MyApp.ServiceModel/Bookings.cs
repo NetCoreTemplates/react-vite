@@ -22,7 +22,6 @@ public class QueryBookings : QueryDb<Booking>
 }
 
 [Tag("Bookings")]
-[Route("/bookings","POST")]
 [AutoApply(Behavior.AuditCreate)]
 [Description("Create a new Booking")]
 [ValidateHasRole("Employee")]
@@ -44,10 +43,7 @@ public class CreateBooking : ICreateDb<Booking>, IReturn<IdResponse>
 }
 
 [Tag("Bookings")]
-[Notes("Find out how to quickly create a <a class='svg-external' target='_blank' href='https://youtu.be/nhc4MZufkcM'>C# Bookings App from Scratch</a>")]
-[Route("/booking/{Id}","PATCH")]
 [AutoApply(Behavior.AuditModify)]
-[Description("Update an existing Booking")]
 [ValidateHasRole("Employee")]
 public class UpdateBooking : IPatchDb<Booking>, IReturn<IdResponse>
 {
@@ -67,9 +63,7 @@ public class UpdateBooking : IPatchDb<Booking>, IReturn<IdResponse>
 }
 
 [Tag("Bookings")]
-[Route("/booking/{Id}","DELETE")]
 [AutoApply(Behavior.AuditSoftDelete)]
-[Description("Delete a Booking")]
 [ValidateHasRole("Employee")]
 public class DeleteBooking : IDeleteDb<Booking>, IReturnVoid
 {
