@@ -1,3 +1,5 @@
+// docs: https://docs.servicestack.net/autoquery/okai-models
+
 declare global {
     export class bool {}
     export class byte {} export class Byte {}
