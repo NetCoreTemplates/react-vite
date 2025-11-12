@@ -54,30 +54,53 @@ npm run lint
 ## Project Structure
 
 ```
-react-vite/
+MyApp.Client/
 ├── src/
 │   ├── assets/        # Static assets
 │   ├── App.tsx        # Main App component
 │   ├── App.css        # App styles
-│   ├── index.css      # Global styles with Tailwind directives
+│   ├── index.css      # Global styles with Tailwind CSS
 │   └── main.tsx       # Application entry point
 ├── public/            # Public static files
 ├── index.html         # HTML template
-├── tailwind.config.js # Tailwind CSS configuration
+├── tailwind.config.ts # Tailwind CSS configuration (TypeScript)
 ├── postcss.config.js  # PostCSS configuration
 ├── tsconfig.json      # TypeScript configuration
 └── vite.config.ts     # Vite configuration
 ```
 
-## Tailwind CSS
+## Tailwind CSS v4
 
-This project uses Tailwind CSS v3 for styling. The configuration is located in `tailwind.config.js`. 
+This project uses **Tailwind CSS v4** with the new CSS-first configuration approach.
 
-Tailwind directives are imported in `src/index.css`:
+### Key Features
+
+- **Vite Plugin**: Uses `@tailwindcss/vite` for optimal performance
+- **CSS-first Configuration**: Modern `@import` syntax instead of legacy directives
+- **TypeScript Config**: Configuration in `tailwind.config.ts`
+- **Built-in Plugins**: Includes `@tailwindcss/forms` plugin
+
+### Configuration
+
+Tailwind is imported using the new v4 syntax in `src/index.css`:
+
 ```css
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@plugin "@tailwindcss/forms";
+@config "../tailwind.config.ts";
+```
+
+The Vite plugin is configured in `vite.config.ts`:
+
+```ts
+import tailwindcss from '@tailwindcss/vite'
+
+export default defineConfig({
+  plugins: [
+    react(),
+    tailwindcss(),
+  ],
+})
 ```
 
 ## React Compiler
