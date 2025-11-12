@@ -2,6 +2,14 @@
 
 React + Vite + TypeScript + Tailwind CSS project template
 
+[![](https://raw.githubusercontent.com/ServiceStack/Assets/master/csharp-templates/react-vite.png)](http://react-vite.web-templates.io)
+
+> Browse [source code](https://github.com/NetCoreTemplates/react-vite), view live demo [react-vite.web-templates.io](http://react-vite.web-templates.io) and install with [dotnet-new](https://docs.servicestack.net/dotnet-new):
+
+```bash
+x new react-vite ProjectName
+```
+
 ## Tech Stack
 
 - **React 19** - A JavaScript library for building user interfaces
