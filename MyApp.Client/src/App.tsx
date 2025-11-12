@@ -46,7 +46,7 @@ function App() {
             <h1 className="text-7xl font-bold mt-4 mb-8">React · Tailwind · TypeScript</h1>
             <div>
                 
-                <HelloApi value="World" />
+                <HelloApi value="React" />
 
                 <p className="my-8 text-xl text-gray-700 dark:text-gray-300">
                     Edit <code
